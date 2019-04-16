@@ -19,3 +19,21 @@ Each section covers about 4 to 5 chapters worth of materail broken out into:
 * Typical API
 * Advanced Use Cases
 
+Sections to come:
+
+* Engineering for Data Science
+* Text Processing
+* Image Processing
+* Support Vector Machines
+* Genetic Algorithms
+* Recommender Systems
+* A/B testing and other related workflows
+* SQL best practice
+* Timeseries Forecasting and Analysis
+* Geospatial Analysis
+* Geospatial and Timeseries forecasting
+* Video Processing
+* Building Data Dashboards
+* Working With Search
+* Building An OCR System
+* Advanced Python Usage
