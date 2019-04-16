@@ -36,9 +36,16 @@ class Dense:
     def compute_gradient(self, layer, error):
         self.delta = error * self.activation_derivative(layer)
         return self.delta.dot(self.synapse.T)
-                
+
+    def prepare_for_multiplication(self, vector):
+        num_cols = len(vector)
+        num_rows = 1
+        return vector.reshape(num_rows, num_cols)
+
     def update_weights(self, layer, learning_rate):
-        self.synapse += layer.T.dot(self.delta) * learning_rate
+        layer = self.prepare_for_multiplication(layer)
+        delta = self.prepare_for_multiplication(self.delta)
+        self.synapse += layer.T.dot(delta) * learning_rate
 
 #multiple hidden layers
 #np.array([1,2,3]).dot(self.synapse).dot(np.array(list(range(400))).reshape((20, 20)))
@@ -61,8 +68,13 @@ class Network:
     def backpropagate(self, error, learning_rate):
         layers = list(reversed(self.layers))
         nn = list(reversed(self.nn))
+        print("nn size", len(nn))
+        print("layers size", len(layers))
         for index, layer in enumerate(layers[:-1]):
-            error = nn[index].compute_gradient(layer, error)
+            try:
+                error = nn[index].compute_gradient(layer, error)
+            except:
+                code.interact(local=locals())
 
         for index, synapse in enumerate(self.nn):
             synapse.update_weights(self.layers[index], learning_rate)
