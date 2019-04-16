@@ -28,16 +28,15 @@ class Dense:
             self.activation_derivative = self.dsigmoid
 
     def forward(self, previous_layer):
-        #code.interact(local=locals())
         self.output = self.activation_function(
             previous_layer.dot(self.synapse)
         )
         return self.output
-
+                           
     def compute_gradient(self, layer, error):
         self.delta = error * self.activation_derivative(layer)
         return self.delta.dot(self.synapse.T)
-    
+                
     def update_weights(self, layer, learning_rate):
         self.synapse += layer.T.dot(self.delta) * learning_rate
 
@@ -50,11 +49,6 @@ class Network:
     def __init__(self, layers):
         self.nn = layers
         self.layers = []
-
-    def combine_input_and_synapse(self, X):
-        output = X.dot(self.nn[0].synapse)
-        output = self.nn[0].activation_function(output)
-        self.layers.append(output)
         
     def forward(self, X):
         #self.combine_input_and_synapse(X)
@@ -65,13 +59,15 @@ class Network:
         return output
 
     def backpropagate(self, error, learning_rate):
-        for index, layer in enumerate(reversed(self.layers)):
-            error = self.nn[index].compute_gradient(layer, error)
+        layers = list(reversed(self.layers))
+        nn = list(reversed(self.nn))
+        for index, layer in enumerate(layers[:-1]):
+            error = nn[index].compute_gradient(layer, error)
 
         for index, synapse in enumerate(self.nn):
             synapse.update_weights(self.layers[index], learning_rate)
 
-            
+        
 class NeuralNetwork:
     def __init__(self, learning_rate=0.1, target_mse=0.01, epochs=500):
         self.layers = []
@@ -96,7 +92,6 @@ class NeuralNetwork:
             for index in range(rows):
                 # Forward
                 output = self.network.forward(X[index])
-
                 # Compute the error
                 error = y[index] - output
                 self.errors.append(error)
