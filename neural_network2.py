@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from sklearn.metrics import mean_squared_error
 import code
 
 class Dense:
@@ -58,7 +59,7 @@ class Network:
         self.layers = []
         
     def forward(self, X):
-        #self.combine_input_and_synapse(X)
+        self.layers = []
         self.layers.append(X)
         for index, synapse in enumerate(self.nn):
             output = synapse.forward(self.layers[index])
@@ -68,13 +69,8 @@ class Network:
     def backpropagate(self, error, learning_rate):
         layers = list(reversed(self.layers))
         nn = list(reversed(self.nn))
-        print("nn size", len(nn))
-        print("layers size", len(layers))
         for index, layer in enumerate(layers[:-1]):
-            try:
-                error = nn[index].compute_gradient(layer, error)
-            except:
-                code.interact(local=locals())
+            error = nn[index].compute_gradient(layer, error)
 
         for index, synapse in enumerate(self.nn):
             synapse.update_weights(self.layers[index], learning_rate)
@@ -83,6 +79,7 @@ class Network:
 class NeuralNetwork:
     def __init__(self, learning_rate=0.1, target_mse=0.01, epochs=500):
         self.layers = []
+        self.connections = []
         self.network = None
         self.learning_rate = learning_rate
         self.target_mse = target_mse
@@ -111,8 +108,8 @@ class NeuralNetwork:
                 # Back-propagate the error
                 self.network.backpropagate(error, self.learning_rate)
 
-            mse = (np.array(self.total_errors) ** 2).mean()
-            if mse <= target_mse:
+            mse = (np.array(self.errors) ** 2).mean()
+            if mse <= self.target_mse:
                 break
 
     def predict(self, X):
