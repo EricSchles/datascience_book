@@ -37,3 +37,4 @@ Sections to come:
 * Working With Search
 * Building An OCR System
 * Advanced Python Usage
+* Active Learning
