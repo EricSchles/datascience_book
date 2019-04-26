@@ -21,6 +21,7 @@ Each section covers about 4 to 5 chapters worth of materail broken out into:
 
 Sections to come:
 
+* Reinforcement Learning
 * Engineering for Data Science
 * Text Processing
 * Image Processing
