@@ -53,4 +53,7 @@ Sections to come:
 * Working with Streaming Data
 * Ensembling
 * Metrics
-* 
+* Hyper parameter tunning
+* Randomness in your models
+* Counterfactual examples
+* testing in machine learning applications
