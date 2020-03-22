@@ -41,3 +41,16 @@ Sections to come:
 * Building An OCR System
 * Advanced Python Usage
 * Active Learning
+* Recurrent Neural Networks
+* Convolutional Neural Networks
+* Capsule Networks
+* Adversarial Machine Learning
+* Open World - in distribution out of distribution
+* Bayesian Machine Learning
+* Graph Based Neural Networks
+* Monitoring
+* Working with Spark
+* Working with Streaming Data
+* Ensembling
+* Metrics
+* 
