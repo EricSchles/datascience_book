@@ -29,6 +29,7 @@ Sections to come:
 * Image Processing
 * Support Vector Machines
 * Genetic Algorithms
+* neural network optimizers
 * Recommender Systems
 * A/B testing and other related workflows
 * SQL best practice
@@ -51,7 +52,16 @@ Sections to come:
 * Monitoring
 * Working with Spark
 * Working with Streaming Data
-* Ensembling
+* Ensembling - scikit learn ensembling strategies
+* Random Forests
+* Additive models:
+	* Gradient boosted trees
+	* splines
+	* General Additive Models
+	* adaboost
+* explainability metrics
+	* litany of examples
+	* showing when and how they can fail
 * Metrics
 * Hyper parameter tunning
 * Randomness in your models
