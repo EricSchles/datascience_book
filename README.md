@@ -67,3 +67,17 @@ Sections to come:
 * Randomness in your models
 * Counterfactual examples
 * testing in machine learning applications
+
+To Dos
+
+* fix Decision Tree Implementation
+* add SVM chapter
+* add dimensionality reduction chapter
+* add clustering chapter
+* add RNN chapter
+* add conv net chapter
+* discuss attention
+* Motivate hypothesis testing internals with fishers tea example and combinatorics
+* create engineering productionization chapter
+* hypothesis test as a ticket within engineering scrum context
+* reproducibility of results
