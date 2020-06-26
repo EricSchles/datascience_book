@@ -1,0 +1,301 @@
+---
+description: |
+    API documentation for modules: string_processor.
+
+lang: en
+
+classoption: oneside
+geometry: margin=1in
+papersize: a4
+
+linkcolor: blue
+links-as-notes: true
+...
+
+
+    
+# Module `string_processor` {#string_processor}
+
+
+
+
+
+
+
+
+    
+## Classes
+
+
+    
+### Class `StringProcessing` {#string_processor.StringProcessing}
+
+
+
+> `class StringProcessing()`
+
+
+An object for processing strings.  The main methods of interest are:
+* to_camel_case
+* to_snake_case
+
+The preferred way to instantiate the class is as follows:
+
+    >>> processor = StringProcessing()
+    
+
+
+
+
+
+
+
+
+
+    
+#### Methods
+
+
+    
+##### Method `capitalize_words` {#string_processor.StringProcessing.capitalize_words}
+
+
+
+    
+> `def capitalize_words(self, words)`
+
+
+Takes in a list of words (strings) and
+capitalizes them.
+
+Parameters:
+* words - a list of words to captialize
+
+Returns:
+A list of words that are capitalized.
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.capitalize_words(['hello', 'there'])
+    ['Hello', 'There']
+    >>> processor.capitalize_words(['hello', 'there', 'friends'])
+    ['Hello', 'There', 'Friends']
+    
+
+
+
+    
+##### Method `connect_words` {#string_processor.StringProcessing.connect_words}
+
+
+
+    
+> `def connect_words(self, lower_case_words)`
+
+
+Connects a list of words via a '_'
+
+Parameters:
+* lower_case_words - a list of lower case words
+
+Returns:
+A string of concatenated words, with '_' between
+each word.
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.connect_words(['hello', 'there'])
+    'hello_there'
+    >>> processor.connect_words(['hello', 'there', 'friends'])
+    'hello_there_friends'
+    
+
+
+
+    
+##### Method `get_lower_case_words` {#string_processor.StringProcessing.get_lower_case_words}
+
+
+
+    
+> `def get_lower_case_words(self, upper_case_indices, name)`
+
+
+Gets a list of the words, in lower case, split on uppercase
+characters
+
+Parameters:
+* upper_case_indices - a list of integers corresponding
+to upper case letters in the string
+* name - the string to split and process
+
+Returns:
+A list of words in lower case
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.get_lower_case_words([0, 5], "HelloThere")
+    ["hello", "there"]
+    >>> processor.get_lower_case_words([0, 5, 10], "HelloThereFriends")
+    >>> ["hello", "there", "friends"]
+    
+
+
+
+    
+##### Method `get_upper_case_indices` {#string_processor.StringProcessing.get_upper_case_indices}
+
+
+
+    
+> `def get_upper_case_indices(self, name)`
+
+
+Gets the indices of all upper case words
+
+Parameters:
+* name - looks for uppercase 
+characters in this string
+
+Returns:
+A list of indices of the uppercase characters
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.get_upper_case_indices("HelloThere")
+    [0, 5]
+    >>> processor.get_upper_case_indices("HelloThereFriends")
+    [0, 5, 10]
+    
+
+
+
+    
+##### Method `remove_whitespace` {#string_processor.StringProcessing.remove_whitespace}
+
+
+
+    
+> `def remove_whitespace(self, name)`
+
+
+Removes whitespace between words
+
+Parameters:
+* name - the string which may or may not
+have whitespace.
+
+Returns:
+A string without whitespace between characters.
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.remove_whitespace("Hello There")
+    "HelloThere"
+    >>> processor.remove_whitespace("HelloThere")
+    "HelloThere"
+    
+
+
+
+    
+##### Method `split` {#string_processor.StringProcessing.split}
+
+
+
+    
+> `def split(self, name)`
+
+
+Split words on either "_" or " " 
+if present in name.
+
+Parameters:
+* name - the string to segment
+
+Returns:
+A tokenized list of words, separated
+by either "_" or whitespace
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.split("hello_there")
+    ['hello', 'there']
+    >>> processor.split("hello there")
+    ['hello', 'there']
+    >>> processor.split("hello there friends")
+    ['hello', 'there', 'friends']
+    
+
+
+
+    
+##### Method `to_camel_case` {#string_processor.StringProcessing.to_camel_case}
+
+
+
+    
+> `def to_camel_case(self, name)`
+
+
+Takes a string of words, either
+separated by "_" or whitespace and
+returns a camel cased string
+
+Parameters:
+* name - the string to camel case
+
+Returns:
+A camel cased string, with no whitespace
+
+Examples:
+
+    >>> processor = StringProcessor()
+    >>> processor.to_camel_case("hello there")
+    'HelloThere'
+    >>> processor.to_camel_case('hello_there')
+    'HelloThere'
+    
+
+
+
+    
+##### Method `to_snake_case` {#string_processor.StringProcessing.to_snake_case}
+
+
+
+    
+> `def to_snake_case(self, name)`
+
+
+Takes a camel case string
+and makes it snake case
+
+Parameters:
+- name - the string to translate
+
+Returns:
+The snake cased string
+
+Example:
+
+    >>> processor = StringProcessor()
+    >>> processor.to_snake_case("HelloThere")
+    'hello_there'
+    >>> processor.to_snake_case("hello_there")
+    'hello_there'
+    >>> processor.to_snake_case("Hello There")
+    'hello_there'
+    
+
+
+
+
+-----
+Generated by *pdoc* 0.6.3 (<https://pdoc3.github.io>).
