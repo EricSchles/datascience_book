@@ -2,3 +2,5 @@ SQLAlchemy
 Flask
 requests
 gunicorn
+Flask-SQLAlchemy
+psycopg2
