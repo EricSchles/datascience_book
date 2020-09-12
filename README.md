@@ -77,7 +77,6 @@ To Dos
 * add RNN chapter
 * add conv net chapter
 * discuss attention
-* Motivate hypothesis testing internals with fishers tea example and combinatorics
 * create engineering productionization chapter
 * hypothesis test as a ticket within engineering scrum context
 * reproducibility of results
