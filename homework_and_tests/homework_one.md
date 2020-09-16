@@ -69,11 +69,13 @@ Part Two)
 write a class called `Animal` with the following:
 
 Instance variables:
+
 	* `number_of_legs`
 	* `number_eyes`
 	* `name`
 
 Methods:
+
 	* `print_name` - return the name of the animal
 	* `speed` - return the speed of the animal with the following formula:
 		number_of_legs * 2.73
