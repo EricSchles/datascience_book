@@ -8,7 +8,7 @@ Hello and welcome to my book!  You'll find the following sections:
 
 1. [Descriptive Statistics and Hypothesis testing](https://github.com/EricSchles/datascience_book/blob/master/Statistical%20Tests%20-%2001.ipynb)
 2. [Applied Statistical Tests - A/B testing](https://github.com/EricSchles/datascience_book/blob/master/Applying%20Statistical%20Tests%20-%2002.ipynb)
-3. [Regression Introduction](https://github.com/EricSchles/datascience_book/blob/master/regression2.ipynb)
+3. [Regression Introduction](https://github.com/EricSchles/datascience_book/blob/master/An%20Introduction%20to%20Regression%20-%2003.ipynb)
 4. [Classification Introduction](https://github.com/EricSchles/datascience_book/blob/master/An%20Introduction%20to%20Classification%20-%2004.ipynb)
 5. [Information Theory, Entropy and Tree Models](https://github.com/EricSchles/datascience_book/blob/master/An%20Introduction%20To%20Information%20Theory.ipynb)
 6. [Neural Network Models](https://github.com/EricSchles/datascience_book/blob/master/An%20Introduction%20to%20Neural%20Networks.ipynb)
