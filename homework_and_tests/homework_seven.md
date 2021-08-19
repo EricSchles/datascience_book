@@ -4,10 +4,6 @@
 
 You should submit a single `.py` with all questions answered.  Make sure the answer to each question appears in a function, a series of functions or a class.  The name of each function or class will be specified in the question.  Do not deviate from the name provided, otherwise you will get zero points for that question.  Make sure to return at the end of all functions, never print.
 
-one - normal
-two - skew
-three - exponential
-four - multi-dim
 
 ## Question One
 
