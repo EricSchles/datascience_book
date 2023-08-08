@@ -2,15 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-"""
-Create Your Own Metropolis-Hastings Markov Chain Monte Carlo Algorithm for Bayesian Inference (With Python)
-Philip Mocz (2023), @PMocz
-
-Apply Markov Chain Monte Carlo to fit exoplanet radial velocity data and
-estimate the posterior distribution of the model parameters
-
-"""
-
 import math
 import random
 
