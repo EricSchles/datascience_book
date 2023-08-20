@@ -6,20 +6,26 @@ _Eric Schles_
 
 Hello and welcome to my book!  You'll find the following sections:
 
-1. Descriptive Statistics and Hypothesis testing
-2. Applied Statistical Tests - A/B testing
-3. Regression Introduction
-4. Classification Introduction
-5. Information Theory, Entropy and Tree Models
-6. Neural Network Models
+1. [Descriptive Statistics and Hypothesis testing](https://github.com/EricSchles/datascience_book/blob/master/1/Statistical%20Tests%20-%2001.ipynb)
+2. [Applied Statistical Tests - A/B testing](https://github.com/EricSchles/datascience_book/blob/master/1/Applying%20Statistical%20Tests%20-%2002.ipynb)
+3. [Regression Introduction](https://github.com/EricSchles/datascience_book/blob/master/2/An%20Introduction%20to%20Regression%20-%2003.ipynb)
+4. [Classification Introduction](https://github.com/EricSchles/datascience_book/tree/master/3)
+5. [Information Theory, Entropy and Tree Models](https://github.com/EricSchles/datascience_book/tree/master/4)
+6. [Neural Network Models](https://github.com/EricSchles/datascience_book/tree/master/5)
+7. [Introduction to Time Series Analysis](https://github.com/EricSchles/datascience_book/tree/master/6)
 
-Each section covers about 4 to 5 chapters worth of materail broken out into:
+Each section covers about 4 to 5 chapters worth of material broken out into:
 
 * Basics
 * Mathematical Intuition
 * Implementation
 * Typical API
 * Advanced Use Cases
+
+In addition to the main chapters, I've added a number of 'engineering' focused chapters that are somewhat supplemental:
+
+
+
 
 Sections to come:
 
